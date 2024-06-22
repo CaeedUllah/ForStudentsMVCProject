@@ -1,0 +1,62 @@
+﻿@{
+    ViewBag.title = "Skill details";
+  
+}
+<body class="navbar-top has-detached-left">
+    <!-- Add New Education Modal -->
+   
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content" style="border-radius: 22px; padding: 0 2px;">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                             style="margin-top: -12px;">
+                            <path d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z"
+                                  fill="#20252F" />
+                            <path d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z"
+                                  fill="#20252F" />
+                        </svg>
+                    </button>
+                    <h5 class="modal-title">Add Skill</h5>
+                </div>
+                @using (Html.BeginForm(null, null, FormMethod.Post, new { name = "formCreateID", id = "formCreateID" }))
+                {
+                    @Html.AntiForgeryToken()
+                    
+                    <div class="modal-body">
+                        <div class="form-horizontal">
+                            <div class="form-group">
+                                <div class="control-label col-md-2 text-semibold">Enter Skill</div>
+                                
+                                <div class="control-label col-md-1 text-semibold text-right">Level</div>
+                                
+                            </div>
+                            <div class="form-group">
+                                <div class="control-label col-md-2 text-semibold">Skill Description</div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-footer" style="margin-top: -30px; margin-bottom: 10px;">
+                        <div class="row">
+                            <div class="col-md-4 text-left">
+                            </div>
+                            <div class="col-md-4 text-center">
+                            </div>
+                            <div class="col-md-4 text-right">
+                                <div class="btn-group">
+                                    <button type="button" class="btn-2" name="Close" data-dismiss="modal">
+                                        Close
+                                    </button>
+                                    <button type="button" id="btnPostCreateSkill" class="btn-1" value="Save">
+                                        Submit
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</body>

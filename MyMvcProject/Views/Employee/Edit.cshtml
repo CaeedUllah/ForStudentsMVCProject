@@ -1,0 +1,63 @@
+﻿@model Employees
+
+@{
+    ViewData["Title"] = "Update Employee";
+}
+<!-- ======= Breadcrumbs ======= -->
+<div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/breadcrumbs-bg.jpg');">
+    <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+
+        <h2>Employee List</h2>
+        <ol>
+
+            <li><a class="readmore stretched-link" asp-controller="Home" asp-action="Index">Home</a></li>
+            <li>Employee</li>
+        </ol>
+
+    </div>
+</div><!-- End Breadcrumbs -->
+
+<h1 style="text-align:center; padding-top:10px;">Delete Employee</h1>
+
+<h4 style="text-align:center;">Employee</h4>
+<hr />
+<div class="row justify-content-center" style="margin:auto;">
+    <div class="col-md-6">
+        <form asp-action="Edit">
+            <input asp-for="EmployeeId" hidden />
+            <div class="form-group">
+                <label asp-for="EmpName" class="control-label"></label>
+                <input asp-for="EmpName" class="form-control" />
+                @*  <span asp-validation-for="EmpName" class="text-danger"></span> *@
+            </div>
+            <div class="form-group">
+                <label asp-for="EmpAddress" class="control-label"></label>
+                <input asp-for="EmpAddress" class="form-control" />
+                <span asp-validation-for="EmpAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EmpDesignation" class="control-label"></label>
+                <input asp-for="EmpDesignation" class="form-control" />
+                <span asp-validation-for="EmpDesignation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EmpContact" class="control-label"></label>
+                <input asp-for="EmpContact" class="form-control" />
+                <span asp-validation-for="EmpContact" class="text-danger"></span>
+            </div>
+            <div class="form-group text-center">
+                <input type="submit" value="Update" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="text-center" style="margin-top: 20px;">
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

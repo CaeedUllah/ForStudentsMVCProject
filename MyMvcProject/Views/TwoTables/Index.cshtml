@@ -1,0 +1,42 @@
+﻿@model IEnumerable< VCombined>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<!-- ======= Breadcrumbs ======= -->
+<div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/breadcrumbs-bg.jpg');">
+    <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+
+        <h2>CombinedData</h2>
+        <ol>
+            <li><a class="readmore stretched-link" asp-controller="Home" asp-action="Index">Home</a></li>
+            <li>CombinedData</li>
+        </ol>
+
+    </div>
+</div><!-- End Breadcrumbs -->
+
+<h1>Records</h1>
+<li><a class="readmore stretched-link" asp-controller="TwoTables" asp-action="Create">Create</a></li>
+<h2>Table A</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Name</th>
+            <th>Address</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.NameForA</td>
+                <td>@item.AddressForA</td>
+                <td>@item.NameForB</td>
+                <td>@item.AddressForB</td>
+            </tr>
+        }
+    </tbody>
+</table>

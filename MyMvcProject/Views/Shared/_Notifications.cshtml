@@ -1,0 +1,29 @@
+﻿@* //this is custom partial view that i created for Notification tempdata *@
+
+@if (TempData["success"] != null)
+{
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script type="text/javascript">
+        toastr.success('@TempData["success"]');
+    </script>
+
+}
+@* //error temp is not created but u can create it and many more *@
+@if (TempData["error"] != null)
+{
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script type="text/javascript">
+        toastr.error('@TempData["error"]');
+    </script>
+}
+
+@* /////////so this is just for show in h2 tag but this not so good////
+you should also make some code to controller but that is same for this and toaster it is alrdy added u can see
+@if (TempData["error"] != null)
+{
+    <h2>@TempData["error"]</h2>
+    //this is the website for tastr https://codeseven.github.io/toastr/
+    and u can use  toastr to display a toast for info, success, warning or error
+} *@

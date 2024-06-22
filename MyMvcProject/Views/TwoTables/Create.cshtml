@@ -1,0 +1,52 @@
+﻿@model VMaAndb
+
+@{
+    ViewData["Title"] = "Add Data";
+}
+<script src=""></script>
+<!-- ======= Breadcrumbs ======= -->
+<div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/breadcrumbs-bg.jpg');">
+    <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+
+        <h2>CombinedData</h2>
+        <ol>
+            <li><a class="readmore stretched-link" asp-controller="Home" asp-action="Index">Home</a></li>
+            <li>CombinedData</li>
+        </ol>
+
+    </div>
+</div><!-- End Breadcrumbs -->
+
+<div class="container mt-5">
+    <h1>Add Data to Tables A and B</h1>
+
+    <form  asp-action="Create" method="post">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Table A</h2>
+                <div class="form-group">
+                    <label for="nameA">Name</label>
+                    <input type="text" class="form-control" id="nameA" name="ForA.NameForA" required>
+                </div>
+                <div class="form-group">
+                    <label for="addressA">Address</label>
+                    <input type="text" class="form-control" id="addressA" name="ForA.AddressForA" required>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <h2>Table B</h2>
+                <div class="form-group">
+                    <label for="nameB">Name</label>
+                    <input type="text" class="form-control" id="nameB" name="ForB.NameForB" required>
+                </div>
+                <div class="form-group">
+                    <label for="addressB">Address</label>
+                    <input type="text" class="form-control" id="addressB" name="ForB.AddressForB" required>
+                </div>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Add Data</button>
+    </form>
+</div>
