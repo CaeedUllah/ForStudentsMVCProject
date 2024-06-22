@@ -21,6 +21,7 @@ namespace MyMvcProject
         public DbSet<VStudent> VStudents { get; set; } // Add this line
         /*public DbSet<StudentPicture> StudentPictures { get; set; }*/
         // to test
+        // to test branch
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
