@@ -20,6 +20,7 @@ namespace MyMvcProject
         public DbSet<b> B { get; set; }
         public DbSet<VStudent> VStudents { get; set; } // Add this line
         /*public DbSet<StudentPicture> StudentPictures { get; set; }*/
+        // to test
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
